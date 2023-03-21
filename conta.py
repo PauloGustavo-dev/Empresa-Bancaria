@@ -5,3 +5,7 @@ class Conta:
         self.titular=titular
         self.saldo=saldo
         self.limite=limite
+    
+    def extrato(self):
+        print("O saldo do titular {} é {}".format(self.titular,self.saldo))
+    
