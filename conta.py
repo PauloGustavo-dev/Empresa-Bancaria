@@ -5,6 +5,7 @@ class Conta:
         self.__titular=titular
         self.__saldo=saldo
         self.__limite=limite
+        self.__codigo_banco="001"
     
     def extrato(self):
         print("O saldo do titular {} é {}".format(self.__titular,self.__saldo))
@@ -23,7 +24,7 @@ class Conta:
             print("O valor {} passou o limite".format(valor))
     
     def transfere(self,valor,destino):
-        self.saca(valor)
+        self.saca(valor)   
         destino.deposita(valor)
         
     #getters e setters
@@ -40,3 +41,11 @@ class Conta:
     @limite.setter
     def limite(self,limite):
         self.__limite = limite
+
+    #metodos para a classe
+    @staticmethod
+    def codigo_banco():
+        return "001"
+    @staticmethod
+    def codigos_bancos():
+        return {'BB':'001', 'Caixa':'104', 'Bradesco':'237'}
